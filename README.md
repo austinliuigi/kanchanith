@@ -6,7 +6,7 @@
 
 To install, open your terminal and run the following commands:
 
-`git clone {url} ~/kanchanith`
+`git clone https://github.com/austinliuigi/kanchanith.git ~/kanchanith`
 
 `cd ~/kanchanith/4`
 
