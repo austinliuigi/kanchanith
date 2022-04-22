@@ -35,6 +35,7 @@ $(BUILDDIR)/buildfiles/%.o: %.cpp
 clean:
 	rm -r $(BUILDDIR)
 	rm $(BINARY)
+	rm map.txt
 
 # Include the dependencies
 -include $(DEPFILES)
