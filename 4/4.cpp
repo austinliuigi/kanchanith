@@ -1,6 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <algorithm>
+#include <random>
 #include <utility>
 using namespace std;
 
@@ -13,7 +15,7 @@ void clearScreen();
 
 int main()
 {
-    string words[] = {"tiger", "cambodia", "music", "phnom penh"};
+    string words[] = {"cambodia", "tiger", "huang", "phnom penh", "music", "ares"};
     clearScreen();
     cout << "Welcome! In this game, you will take scrambled words and rearrange them back into their original form.\n"
             "\nAs a clue, each word relates to you, Tan, in some way.\n"
@@ -42,7 +44,7 @@ void printString(string s)
 
 string scramble(string s)
 {
-    random_shuffle(s.begin(), s.end());
+    shuffle(s.begin(), s.end(), random_device());
     return s;
 }
 
