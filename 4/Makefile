@@ -1,5 +1,5 @@
 # CPP Makefile
-BINARY=bin
+BINARY=4
 BUILDDIR=./bin
 SRCDIRS=.
 
@@ -22,6 +22,7 @@ OBJFILES=$(patsubst %.cpp,$(BUILDDIR)/buildfiles/%.o,$(SRCFILES))
 DEPFILES=$(patsubst %.o,%.d,$(OBJFILES))
 
 all: $(BUILDDIR)/$(BINARY)
+	cp $(BUILDDIR)/$(BINARY) .
 
 $(BUILDDIR)/$(BINARY): $(OBJFILES)
 	mkdir -p $(dir $@)
@@ -33,6 +34,7 @@ $(BUILDDIR)/buildfiles/%.o: %.cpp
 
 clean:
 	rm -r $(BUILDDIR)
+	rm $(BINARY)
 
 # Include the dependencies
 -include $(DEPFILES)
